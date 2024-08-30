@@ -2,9 +2,11 @@
 require_once("config.php");
 
 if(isset($_SESSION['user'])){
-    header("location:user.php");
+    header("location:user.php");}
+
 require_once('auth.php');
-}
+    
+
 ?>
 
 <!DOCTYPE html>
