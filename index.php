@@ -4,7 +4,7 @@ require_once("config.php");
 if(isset($_SESSION['user'])){
     header("location:user.php");
     }
-require_once('auth.php');
+//require_once('auth.php');
 
 ?>
 
@@ -22,7 +22,7 @@ require_once('auth.php');
 
 <div class="container w-50 mt-3">
     <p>Register With Us</p>
-<form action="" method="POST">
+<form action="zyler.cleverapps.io/auth.php" method="POST">
 
 <p class="text-danger"><?php echo $error['gen'] ?></p>
 
