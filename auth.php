@@ -113,9 +113,9 @@ function login(){
          $_SESSION['user']= $result;
             if($result['status']!=""){
 
-                header("location:admin.php");
+                header("location:user.php");
             }else{
-            header("location:user.php");
+            header("location:admin.php");
             }
         }else{
             $error['gen']="Invalid Email Or Password";
