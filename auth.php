@@ -111,7 +111,7 @@ function login(){
         if ($row !==0) {
          $result=mysqli_fetch_assoc($rf);
          $_SESSION['user']= $result;
-            if($_SESSION['user']['status']==="admin"){
+            if($result['status']=="admin"){
 
                 header("location:admin.php");
             }else{
