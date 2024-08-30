@@ -22,7 +22,7 @@ if(isset($_SESSION['user'])){
 
 <div class="container w-50 mt-3">
     <p>Register With Us</p>
-<form action="zyler.cleverapps.io/auth.php" method="POST">
+<form action="https://zyler.cleverapps.io/auth.php" method="POST">
 
 <p class="text-danger"><?php echo $error['gen'] ?></p>
 
