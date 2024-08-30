@@ -51,7 +51,7 @@ function signup(){
 
         }else{
            
-      $insert="INSERT INTO user(name,email,password,verified,points) VALUES('$name','$email','$password','false',5)";
+      $insert="INSERT INTO user(name,email,password,verified,points,status) VALUES('$name','$email','$password','false',5,'user')";
       $query=mysqli_query($connect,$insert);
      
       if(isset($_REQUEST['referid'])){
@@ -111,7 +111,12 @@ function login(){
         if ($row !==0) {
          $result=mysqli_fetch_assoc($rf);
          $_SESSION['user']= $result;
+            if($_SESSION['user']['status']==="Admin"){
+
+                header("location:admin.php");
+            }else{
             header("location:user.php");
+            }
         }else{
             $error['gen']="Invalid Email Or Password";
         }
@@ -124,7 +129,7 @@ function login(){
 
 function logI($email) {
     global $connect;
-    $select="SELECT id,name,email,date,verified,points FROM user WHERE email='$email' LIMIT 1";
+    $select="SELECT id,name,email,date,verified,points,status FROM user WHERE email='$email' LIMIT 1";
     $query=mysqli_query($connect,$select);
     $result=mysqli_fetch_assoc($query);
     return $result;
