@@ -5,7 +5,14 @@ if(isset($_SESSION['user'])){
     header("location:user.php");}
 
 require_once('auth.php');
-    
+
+
+$url = 'http://twitter.com/users/show/XpertDevelopers';
+$response = file_get_contents ( $url );
+$t_profile = new SimpleXMLElement ( $response );
+$count = $t_profile->followers_count;
+
+echo “Expert Developer Twitter Followers : “.$count;
 
 ?>
 
