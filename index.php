@@ -7,7 +7,7 @@ if(isset($_SESSION['user'])){
 require_once('auth.php');
 
 
-$url = 'http://twitter.com/users/show/XpertDevelopers';
+$url = 'http://twitter.com/users/show/zylercodes';
 $response = file_get_contents ( $url );
 var_dump($response);
 
