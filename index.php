@@ -9,10 +9,12 @@ require_once('auth.php');
 
 $url = 'http://twitter.com/users/show/XpertDevelopers';
 $response = file_get_contents ( $url );
-$t_profile = new SimpleXMLElement ( $response );
-$count = $t_profile->followers_count;
+var_dump($response);
 
-echo $count;
+//$t_profile = new SimpleXMLElement ( $response );
+//$count = $t_profile->followers_count;
+
+//echo $count;
 
 ?>
 
