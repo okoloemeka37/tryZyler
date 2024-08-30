@@ -67,7 +67,7 @@ $scores=getScore();
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <div>
                                 <h6 class="mb-1">Refer us</h6>
-                                <p class="mb-0 text-muted">http://localhost/tryEmeka/index.php?referid=<?php echo $_SESSION['user']['id'] ?>&user_id=<?php echo $_SESSION['user']['id']?></p>
+                                <p class="mb-0 text-muted">https://zyler.cleverapps.io/index.php?referid=<?php echo $_SESSION['user']['id'] ?>&user_id=<?php echo $_SESSION['user']['id']?></p>
                             </div>
                            
                         </li>
