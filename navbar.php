@@ -33,6 +33,9 @@ if (isset($_SESSION['user'])) {?>
   <li class="nav-item ml-4">
           <a class="nav-link" href="#"><?php echo $_SESSION['user']['name']?></a>
         </li>
+  <?php if($_SESSION['user']['status']== 'admin') {?>
+<li class="nav-item btn btn-primary ml-3"><a class ="nav-link" href="task.php">Add Task</a></li>
+  <?php } ?>
         <li class="nav-item">
           <a class="nav-link" href="logout.php">Logout</a>
         </li>
