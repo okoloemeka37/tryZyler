@@ -2,7 +2,12 @@
 require_once("config.php");
 require_once('auth.php');
 if(isset($_SESSION['user'])){
+    if($_SESSION["user"]["status"]== "admin"){
+header("location:admin.php");
+    }else{
 header("location:user.php");
+        
+    }
 }
 ?>
 
