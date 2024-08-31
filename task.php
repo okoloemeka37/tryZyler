@@ -78,7 +78,7 @@ $tasks=tasks();
                     <td><?php  echo $task['des']?></td>
                     <td><?php echo $task['point']?></td>
                     <td class="btn bnt-dark">Edit</td>
-                    <td class="btn btn-danger" id=<?php echo $task['id'] ?>>Delete</td>
+                    <td class="btn btn-danger del" id=<?php echo $task['id'] ?> >Delete</td>
                 </tr>
               <?php } ?>
             </tbody>
@@ -87,7 +87,7 @@ $tasks=tasks();
 
      <script>
         // Handle form submission
-        document.getElementById('.delete').addEventListener('click', function(event) {
+        document.getElementById('.del').addEventListener('click', function(event) {
         alert(this.id);
         
         })
