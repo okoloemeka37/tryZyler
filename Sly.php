@@ -39,7 +39,7 @@ if (isset($_POST['task'])) {
     $error['gen']="An Error Occured From Our End";
    }
 }
-
+}
 function tasks() {
   global $connect;
   $select="SELECT * FROM task ORDER BY id DESC";
