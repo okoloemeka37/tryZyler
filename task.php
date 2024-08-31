@@ -97,7 +97,7 @@ $tasks=tasks();
             }
         fetch('Sly.php',{
             method:"POST",
-            body:JSON.stringify(body)
+            body:body
         }) .then(response => response.text())
                     .then(data => {
                         // Display the response in the #response div
