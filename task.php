@@ -66,7 +66,7 @@ $tasks=tasks();
     </div>
 
     <!-- JavaScript -->
-    <script>
+ <!--    <script>
         // Handle form submission
         document.getElementById('taskForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form from refreshing the page
@@ -93,7 +93,7 @@ $tasks=tasks();
             document.getElementById('taskTitle').value = '';
             document.getElementById('taskDescription').value = '';
         });
-    </script>
+    </script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
