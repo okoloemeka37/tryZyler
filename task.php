@@ -90,7 +90,21 @@ $tasks=tasks();
        const dels= document.querySelectorAll('.del')
        dels.forEach(del => {
         del.addEventListener('click', function(event) {
-        alert(this.id);
+            let id=this.id;
+            const body={
+                id,
+                type:"Delete"
+            }
+        fetch('Sly.php',{
+            method:"POST",
+            body:JSON.stringify(body)
+        }) .then(response => response.text())
+                    .then(data => {
+                        // Display the response in the #response div
+                        console.log(data)
+                    })
+                    .catch(error => console.error('Error:', error));
+                });
        });
       
         

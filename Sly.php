@@ -55,7 +55,7 @@ gn();
 function den() {
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       // Get the form data
-      if (isset($_POST['delete'])) {
+      if (isset($_POST['type'])) {
     
       $name = isset($_POST['name']) ? $_POST['name'] : '';
       $email = isset($_POST['email']) ? $_POST['email'] : '';
