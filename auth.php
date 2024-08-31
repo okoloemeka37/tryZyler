@@ -111,12 +111,7 @@ function login(){
         if ($row !==0) {
          $result=mysqli_fetch_assoc($rf);
          $_SESSION['user']= $result;
-            if($result['status']!="admin"){
-
-                header("location:admin.php");
-            }else{
-            header("location:admin.php");
-            }
+        header("location:admin.php");
         }else{
             $error['gen']="Invalid Email Or Password";
         }
