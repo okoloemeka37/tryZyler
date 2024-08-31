@@ -4,25 +4,22 @@ require_once("config.php");
 echo $_SESSION["user"]["status"];
 
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <?php require_once("navbar.php")?>
+    <?php require_once("navbar.php")?>
     <div class="container mt-4">
         <h1 class="mb-4">User Management</h1>
 
         <!-- Table to list users -->
         <table class="table table-bordered">
-            <thead>
+            <thead class="table-light">
                 <tr>
                     <th>#</th>
                     <th>Name</th>
@@ -63,8 +60,6 @@ echo $_SESSION["user"]["status"];
         }
     </script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
