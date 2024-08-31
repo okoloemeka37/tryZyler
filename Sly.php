@@ -60,6 +60,8 @@ function den() {
   } else {
       echo "Invalid request method.";
   }
+
+  var_dump($_POST);
 } 
   }
 
