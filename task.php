@@ -19,6 +19,8 @@ $tasks=tasks();
 </head>
 <body>
     <?php require_once("navbar.php")?>
+<div class="mes btn btn-primary"><?php $error['gen'] ?></div>
+
     <div class="container mt-4">
         <h1 class="mb-4">Task Manager</h1>
 
@@ -27,16 +29,20 @@ $tasks=tasks();
             <div class="mb-3">
                 <label for="taskTitle" class="form-label">Task Title</label>
                 <input type="text" name="name" class="form-control" id="taskTitle" placeholder="Enter task title" required>
+           <p class="text-danger"><?php echo $error['name']?></p>
+           
             </div>
             <div class="mb-3">
                 <label for="taskDescription" class="form-label">Task Description</label>
                 <textarea class="form-control" name="des" id="taskDescription" rows="3" placeholder="Enter task description" required></textarea>
+           <p class="text-danger"><?php echo $error['des']?></p>
+           
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Points Awarded</label>
                 <input type="number" name="point" class="form-control" id="" placeholder="Enter Point">
-
+                <p class="text-danger"><?php echo $error['point'] ?></p>
             </div>
             <button type="submit" name="task" class="btn btn-primary">Add Task</button>
         </form>
