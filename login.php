@@ -37,7 +37,7 @@ header("location:user.php");
     </div>
     <div class="mb-3">
         <label for="Password" class="form-label">Password</label>
-        <input type="text" class="form-control" id="Password" name="password" >
+        <input type="password" class="form-control" id="Password" name="password" >
         <div id="PasswordError" class="text-danger"><?php echo $error['password']?></div>
     </div>
    

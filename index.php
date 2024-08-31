@@ -45,12 +45,12 @@ require_once('auth.php')
     </div>
     <div class="mb-3">
         <label for="Password" class="form-label">Password</label>
-        <input type="text" class="form-control" id="Password" name="password" >
+        <input type="password" class="form-control" id="Password" name="password" >
         <div id="PasswordError" class="text-danger"></div>
     </div>
     <div class="mb-3">
         <label for="ComfirmP" class="form-label">Comfirm Password</label>
-        <input type="text" class="form-control" id="ComfirmP" name="ComfirmP" >
+        <input type="password" class="form-control" id="ComfirmP" name="ComfirmP" >
         <div id="ComfirmPError" class="text-danger"><?php echo $error['password'] ?></div>
     </div>
 

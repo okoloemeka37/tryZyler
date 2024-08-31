@@ -87,8 +87,12 @@ $tasks=tasks();
 
      <script>
         // Handle form submission
-        document.getElementById('.del').addEventListener('click', function(event) {
+       const dels= document.getElementById('.del')
+       dels.forEach(del => {
+        del.addEventListener('click', function(event) {
         alert(this.id);
+       });
+      
         
         })
     </script> 
