@@ -1,8 +1,7 @@
 <?php
 require_once("config.php");
-
-echo $_SESSION["user"]["status"];
-
+require_once("sly.php");
+$users=gu();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,12 +28,13 @@ echo $_SESSION["user"]["status"];
                 </tr>
             </thead>
             <tbody>
-                <!-- Example user row -->
+             <?php foreach($users as $user){?>
+    
                 <tr>
                     <td>1</td>
-                    <td>John Doe</td>
-                    <td>johndoe@example.com</td>
-                    <td>150</td>
+                    <td><?php echo $user['name'] ?></td>
+                    <td><?php echo $user['email'] ?></td>
+                    <td><?php echo $user['points'] ?></td>
                     <td>
                         <!-- Suspend button -->
                         <button class="btn btn-warning btn-sm" onclick="suspendUser(1)">Suspend</button>
@@ -42,6 +42,7 @@ echo $_SESSION["user"]["status"];
                         <button class="btn btn-primary btn-sm" onclick="emailUser('johndoe@example.com')">Email</button>
                     </td>
                 </tr>
+            <?php } ?>                
                 <!-- Repeat for other users -->
             </tbody>
         </table>
