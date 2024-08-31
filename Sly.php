@@ -12,7 +12,7 @@ $error=['name'=>'','des'=>'','point'=>'','gen'=>''];
 
 function gn() {
 
- global $error,$name,$des,$connect;
+ global $error,$name,$des,$connect,$point;
 if (isset($_POST['task'])) {
     if (empty($_POST['name'])) {
     $error['name']="This Field Must Not Be Empty";
