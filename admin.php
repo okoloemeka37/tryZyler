@@ -31,7 +31,7 @@ $users=gu();
              <?php 
 $h=0;
 foreach($users as $user){
-    $v=$h+1; ?>
+    $v=$h++; ?>
     
                 <tr>
                     <td><?php echo $v ?></td>
