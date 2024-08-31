@@ -5,6 +5,8 @@ if(!isset($_SESSION['user'])){
     }
 require_once("action.php");
 
+require_once("Sly.php");
+$tasks=tasks();
 //4448317948
 //29204706
 
@@ -50,20 +52,20 @@ $scores=getScore();
                         <h5 class="mb-0">Tasks</h5>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
+
+                    <?php foreach ($tasks as $task ) { ?>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
                             <div>
-                                <h6 class="mb-1">Follow Us On Twitter</h6>
-                                <p class="mb-0 text-muted">Working On it</p>
+                                <h6 class="mb-1"><?php echo $task['name'] ?></h6>
+                                <p class="mb-0 text-muted"><?php echo $task['des']?></p>
                             </div>
                             
                         </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div>
-                                <h6 class="mb-1">Task 2</h6>
-                                <p class="mb-0 text-muted">Description of Task 2</p>
-                            </div>
-                            
-                        </li>
+                        
+                 <?php   } ?>
+
+                      
+                        
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <div>
                                 <h6 class="mb-1">Refer us</h6>
