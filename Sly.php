@@ -30,6 +30,9 @@ if (isset($_POST['task'])) {
     }
     if (empty($_POST['point'])) {
     $error['point']="This Field is Required";
+    return false;
+    }else{
+      $point=$_POST['point'];
     }
     $insert="INSERT INTO task(name,des,point) VALUE ('$name','$des','$point')";
    $query= mysqli_query($connect,$insert);
