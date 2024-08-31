@@ -1,7 +1,7 @@
 <?php
 require_once("config.php");
 
-require_once("sly.php");
+require_once("Sly.php");
 
 $users=gu();
 
