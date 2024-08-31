@@ -2,9 +2,19 @@
 <?php 
 require_once("config.php");
 
+if (isset($_SESSION['user'])) {
+    if ($_SESSION['user']['status'] !== 'admin') {
+        header("location:user.php");
+    }
+}else{
+  header("location:login.php");
+}
+
+
 require_once("Sly.php");
 
 $tasks=tasks();
+
 
 ?>
 
@@ -56,6 +66,8 @@ $tasks=tasks();
                     <th>Title</th>
                     <th>Description</th>
                     <th>Point</th>
+                    <th>act 1</th>
+                    <th>act2</th>
                 </tr>
             </thead>
             <tbody id="taskList">
@@ -65,41 +77,21 @@ $tasks=tasks();
                     <td><?php echo $task['name'] ?></td>
                     <td><?php  echo $task['des']?></td>
                     <td><?php echo $task['point']?></td>
+                    <td class="btn bnt-dark">Edit</td>
+                    <td class="btn btn-danger" id=<?php echo $task['id'] ?>>Delete</td>
                 </tr>
               <?php } ?>
             </tbody>
         </table>
     </div>
 
-    <!-- JavaScript -->
- <!--    <script>
+     <script>
         // Handle form submission
-        document.getElementById('taskForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form from refreshing the page
-
-            // Get the task title and description
-            const title = document.getElementById('taskTitle').value;
-            const description = document.getElementById('taskDescription').value;
-
-            // Get the task list table body
-            const taskList = document.getElementById('taskList');
-
-            // Determine the new task ID
-            const taskId = taskList.rows.length + 1;
-
-            // Create a new row for the task
-            const newRow = taskList.insertRow();
-            newRow.innerHTML = `
-                <td>${taskId}</td>
-                <td>${title}</td>
-                <td>${description}</td>
-            `;
-
-            // Clear the form inputs
-            document.getElementById('taskTitle').value = '';
-            document.getElementById('taskDescription').value = '';
-        });
-    </script> -->
+        document.getElementById('.delete').addEventListener('click', function(event) {
+        alert(this.id);
+        
+        })
+    </script> 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

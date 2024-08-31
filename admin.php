@@ -1,9 +1,18 @@
 <?php
 require_once("config.php");
+if (isset($_SESSION['user'])) {
+    if ($_SESSION['user']['status'] !=='admin') {
+   header('location:user.php');
+}
+}else {
+    header('location:login.php');
+}
+
 
 require_once("Sly.php");
 
 $users=gu();
+
 
 
 ?>
