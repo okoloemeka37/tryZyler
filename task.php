@@ -53,7 +53,7 @@ $tasks=tasks();
                 </tr>
             </thead>
             <tbody id="taskList">
-               <?php $count=1; foreach ($tasts as $task) { $c=$count++ ?>
+               <?php $count=1; foreach ($tasks as $task) { $c=$count++ ?>
                 <tr>
                     <td><?php echo $c?></td>
                     <td><?php echo $task['name'] ?></td>

@@ -34,7 +34,7 @@ $users=gu();
             <tbody>
               
              
-             <?php foreach($users as $user){?>
+             <?php $c=1; foreach($users as $user){$v=$c++?>
     
                 <tr>
                     <td><?php echo $v ?></td>
