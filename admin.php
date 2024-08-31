@@ -28,10 +28,12 @@ $users=gu();
                 </tr>
             </thead>
             <tbody>
-             <?php foreach($users as $user){?>
-    
+             <?php 
+$h=0;
+foreach($users as $user){?>
+    $h+1;
                 <tr>
-                    <td>1</td>
+                    <td><?php echo $h ?></td>
                     <td><?php echo $user['name'] ?></td>
                     <td><?php echo $user['email'] ?></td>
                     <td><?php echo $user['points'] ?></td>
