@@ -29,7 +29,7 @@ $users=gu();
             </thead>
             <tbody>
              <?php 
-$h=0;
+$h=1;
 foreach($users as $user){
     $v=$h++; ?>
     
