@@ -113,7 +113,7 @@ function login(){
          $_SESSION['user']= $result;
             if($_SESSION["user"]['status']!="admin"){
 
-                header("location:user.php");
+                header("location:admin.php");
             }else{
             header("location:admin.php");
             }
