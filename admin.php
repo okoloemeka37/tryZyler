@@ -1,7 +1,11 @@
 <?php
 require_once("config.php");
-require_once("Sly.php");
+
+require_once("sly.php");
+
 $users=gu();
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,10 +32,9 @@ $users=gu();
                 </tr>
             </thead>
             <tbody>
-             <?php 
-$h=1;
-foreach($users as $user){
-    $v=$h++; ?>
+              
+             
+             <?php foreach($users as $user){?>
     
                 <tr>
                     <td><?php echo $v ?></td>

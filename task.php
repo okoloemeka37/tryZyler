@@ -1,5 +1,12 @@
 
-<?php require_once("config.php")?>
+<?php 
+require_once("config.php");
+
+require_once("sly.php");
+
+$tasks=tasks();
+
+?>
 
 
 <!DOCTYPE html>
@@ -16,16 +23,22 @@
         <h1 class="mb-4">Task Manager</h1>
 
         <!-- Form to add a new task -->
-        <form id="taskForm">
+        <form id="taskForm" method="POST">
             <div class="mb-3">
                 <label for="taskTitle" class="form-label">Task Title</label>
-                <input type="text" class="form-control" id="taskTitle" placeholder="Enter task title" required>
+                <input type="text" name="name" class="form-control" id="taskTitle" placeholder="Enter task title" required>
             </div>
             <div class="mb-3">
                 <label for="taskDescription" class="form-label">Task Description</label>
-                <textarea class="form-control" id="taskDescription" rows="3" placeholder="Enter task description" required></textarea>
+                <textarea class="form-control" name="des" id="taskDescription" rows="3" placeholder="Enter task description" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Add Task</button>
+
+            <div class="mb-3">
+                <label class="form-label">Points Awarded</label>
+                <input type="number" name="point" class="form-control" id="" placeholder="Enter Point">
+
+            </div>
+            <button type="submit" name="task" class="btn btn-primary">Add Task</button>
         </form>
 
         <!-- Table to display the tasks -->
@@ -36,10 +49,18 @@
                     <th>#</th>
                     <th>Title</th>
                     <th>Description</th>
+                    <th>Point</th>
                 </tr>
             </thead>
             <tbody id="taskList">
-                <!-- Tasks will be added here dynamically -->
+               <?php $count=1; foreach ($tasts as $task) { $c=$count++ ?>
+                <tr>
+                    <td><?php echo $c?></td>
+                    <td><?php echo $task['name'] ?></td>
+                    <td><?php  echo $task['des']?></td>
+                    <td><?php echo $task['point']?></td>
+                </tr>
+              <?php } ?>
             </tbody>
         </table>
     </div>
