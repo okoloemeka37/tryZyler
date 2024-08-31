@@ -56,19 +56,7 @@ function den() {
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       // Get the form data
       if (isset($_POST['type'])) {
-    
-      $name = isset($_POST['name']) ? $_POST['name'] : '';
-      $email = isset($_POST['email']) ? $_POST['email'] : '';
-  
-      // Process the data (e.g., save to the database, send an email, etc.)
-      // For this example, we'll just return a message
-  
-      if (!empty($name) && !empty($email)) {
-          // Return a response
-          echo "Received the following data:<br>Name: " . htmlspecialchars($name) . "<br>Email: " . htmlspecialchars($email);
-      } else {
-          echo "Please provide both a name and an email.";
-      }
+    echo $_POST['id'];
   } else {
       echo "Invalid request method.";
   }
